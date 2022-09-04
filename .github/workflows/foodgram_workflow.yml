@@ -62,7 +62,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            cd backend/infra/
+            cd infra/
             sudo docker-compose stop
             sudo docker-compose rm Django
             touch .env
