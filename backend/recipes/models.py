@@ -21,7 +21,9 @@ class Recipe(models.Model):
         upload_to='recipes/'
     )
     text = models.TextField()
-    cooking_time = models.PositiveIntegerField(validators=MinValueValidator(1))
+    cooking_time = models.PositiveIntegerField(
+        validators=[MinValueValidator(1)]
+    )
 
     class Meta:
         ordering = ('-pub_date',)
