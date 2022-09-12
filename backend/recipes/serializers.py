@@ -64,7 +64,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         for ingredient_data in valid_ingredients:
             ingredient = get_object_or_404(
                 Ingredient, id=ingredient_data.get('id'))
-            IngredientAmount.objects.create(
+            IngredientAmount.objects.bulk_create(
                 recipe=recipe,
                 ingredient=ingredient,
                 amount=ingredient_data.get('amount'))

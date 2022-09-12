@@ -3,14 +3,6 @@ from rest_framework.validators import ValidationError as RFError
 from tags_ingr.models import Ingredient, Tag
 
 
-def validate_time(value):
-    """Валидация поля модели - время приготовления."""
-    if value < 1:
-        raise RFError(
-            ['Время не может быть менее минуты.']
-        )
-
-
 def validate_ingredients(data):
     """Валидация ингредиентов и количества."""
     if not data:

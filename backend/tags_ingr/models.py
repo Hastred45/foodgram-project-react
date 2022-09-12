@@ -24,9 +24,11 @@ class Tag(models.Model):
 
     class Meta:
         ordering = ('id',)
+        verbose_name = 'Тег'
+        verbose_name_plural = 'Теги'
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 class Ingredient(models.Model):
@@ -35,6 +37,8 @@ class Ingredient(models.Model):
 
     class Meta:
         ordering = ('id',)
+        verbose_name = 'Ингредиент'
+        verbose_name_plural = 'Ингредиенты'
 
     def __str__(self):
-        return self.name
+        return str(self.name)
