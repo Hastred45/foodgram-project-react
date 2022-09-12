@@ -48,7 +48,7 @@ class IngredientAmount(models.Model):
                 name='unique_recipe_ingredient'
             )
         ]
-    
+
     def __str__(self):
         return f'Ингредиенты для рецепта {self.recipe}'
 
