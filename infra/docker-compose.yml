@@ -4,7 +4,7 @@ services:
   frontend:
     image: hastred/foodgram_frontend:v1
     volumes:
-      - ../frontend/:/app/result_build/
+      - frontend_value:/app/result_build/
   PostgreSQL:
     image: postgres:13.0-alpine
     volumes:
@@ -34,6 +34,7 @@ services:
     depends_on:
       - Django
 volumes:
+  frontend_value:
   pgdata:
   static_value:
   media_value:
